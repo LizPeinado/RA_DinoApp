@@ -1,0 +1,46 @@
+		--- Diálogo intro de Rex ---
+
+¿Hola? ¿Hay alguien ahí? (1-9 fr)
+
+¡Woah! [Sorprendido] (10-15 fr)
+
+Creo que he bajado un poco de peso ¡estoy en los huesos! [Sorprendido] (15-20 fr)
+
+Y ni hablar de que solo soy una cabeza... [Confundido] (21-31 fr)
+
+Dejemos eso por ahora, seguro que luego hallaremos el resto de mi cuerpo. (*Carraspeo*)
+
+¡Saludos, paleontólogo en proceso! Mis amigos y yo requerimos tu ayuda. 
+
+Hace mucho tiempo intentamos digitalizarnos para evitar la extinción. 
+Pero parece que algunos códigos... genéticos, se perdieron por el camino. 
+
+Si nos ayudas a encontrar los códigos y a ordenarlos de la forma correcta...
+
+¡Digitalizaríamos a mis amigos! eso es ¿Por qué no empezamos de una vez?
+
+¿Podrías ayudarme a encontrar el código de mi amigo Carnotauro? Apuesto a que se encuentra por aquí. 
+
+		--- Tutorial 1 ---
+
+El código perdido del carnotauro está esparcido por este sitio (mapa del área del museo). Encuentra las letras e ingrésalas en la consola (imágen de la consola/dónde ingresar el código).
+
+Cuanto más cerca estés de una parte del código se te presentará una pista de su ubicación (Ejemplo con la primera pista). 
+
+		--- Tutorial 2 ---
+
+Ahora que ya has registrado a el Carnotauro, puedes visitarlo nuevamente en tu dispositivo y ver su información cuando quieras. (imágen de donde está el botón para verlo de nuevo)
+
+		--- Diálogo Rex final de la demo --- 
+
+Por ahora solo tenemos información de nuestro amigo Carno, joven paleontólogo. 
+
+Tal vez si vuelves después tenga más información de otros compañeros.
+
+Y del resto de mi cuerpo. 
+
+...
+
+Espero. 
+
+¡Nos vemos!
