@@ -9,8 +9,20 @@ EditorBuildSettings:
     path: Assets/Scenes/SampleScene.unity
     guid: 99c9720ab356a0642a771bea13969a05
   - enabled: 1
+    path: Assets/Scenes/Inicio-Presentacion.unity
+    guid: 3a527f436f7d0dd40a153157857f75b0
+  - enabled: 1
+    path: Assets/Scenes/Pistas.unity
+    guid: 898c17dafe65bb247b07e8c1610814cb
+  - enabled: 1
+    path: Assets/Scenes/Mapa.unity
+    guid: d62857ecf5a250e43ba70bdbf65deb52
+  - enabled: 1
     path: Assets/Scenes/EscenaAR.unity
     guid: dd0929aa1f38e4e4280c4a7ffa101144
+  - enabled: 1
+    path: Assets/Scenes/DinoDex.unity
+    guid: c21a30eca4863744989a7dc2055c582a
   m_configObjects:
     UnityEditor.XR.ARCore.ARCoreSettings: {fileID: 11400000, guid: d0d179b39617024408e2734ada8519cc, type: 2}
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
