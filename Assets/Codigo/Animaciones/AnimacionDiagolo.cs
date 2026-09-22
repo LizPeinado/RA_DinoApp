@@ -1,55 +1,48 @@
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
+using System.Collections;
 
 public class AnimacionDiagolo : MonoBehaviour
 {
     [Header("Referencias UI")]
     public TMP_Text textoNombre;
-    public TMP_Text textoDialogo;
+    public EfectoTextoMaquina textoDialogoEfecto;
     public Button botonAvanzar;
 
-    [Header("Modelo y Animaci�n")]
+    [Header("Modelo y Animación")]
     public Animator animatorRex;
 
-    [Header("Navegaci�n")]
+    [Header("Navegación")]
     public Navegacion sistemaNavegacion;
 
-    [Header("Datos del Di�logo")]
+    [Header("Datos del Diálogo")]
     public string[] lineasDialogo = {
-        "�Hola? �Hay alguien ah�?",
-        "�Woah!",
-        "Creo que he bajado un poco de peso �estoy en los huesos!",
+        "¿Hola? ¿Hay alguien ahí?",
+        "¡Woah!",
+        "Creo que he bajado un poco de peso ¡estoy en los huesos!",
         "Y ni hablar de que solo soy una cabeza...",
         "Dejemos eso por ahora, seguro que luego hallaremos el resto de mi cuerpo. Ehrm...",
-        "�Saludos, paleont�logo en proceso! Mis amigos y yo requerimos tu ayuda.",
-        "Hace mucho tiempo intentamos digitalizarnos para evitar la extinci�n.",
-        "Pero parece que algunos c�digos... gen�ticos, se perdieron por el camino.",
-        "Si nos ayudas a encontrar los c�digos y a ordenarlos de la forma correcta...",
-        "�Digitalizar�amos a mis amigos! eso es �Por qu� no empezamos de una vez?",
-        "�Podr�as ayudarme a encontrar el c�digo de mi amigo Carnotauro? Apuesto a que se encuentra por aqu�."
+        "¡Saludos, paleontólogo en proceso! Mis amigos y yo requerimos tu ayuda.",
+        "Hace mucho tiempo intentamos digitalizarnos para evitar la extinción.",
+        "Pero parece que algunos códigos... genéticos, se perdieron por el camino.",
+        "Si nos ayudas a encontrar los códigos y a ordenarlos de la forma correcta...",
+        "¡Digitalizaríamos a mis amigos! eso es ¿Por qué no empezamos de una vez?",
+        "¿Podrías ayudarme a encontrar el código de mi amigo Carnotauro? Apuesto a que se encuentra por aquí."
     };
 
-    [Header("Animaci�n por l�nea (nombres exactos del Animator)")]
+    [Header("Animación por línea (nombres exactos del Animator)")]
     public string[] triggersAnimacion = {
-        "Craneo Habla",            // 0  �Hola?...
-        "Expresi�n sorprendido",   // 1  �Woah!  (luego pasa solo a Boquiabierto Est�tico)
-        "Habla confundido",        // 2  ...en los huesos
-        "Craneo Habla",            // 3
-        "Craneo Habla",            // 4
-        "Craneo Habla",            // 5
-        "Craneo Habla",            // 6
-        "Craneo Habla",            // 7
-        "Craneo Habla",            // 8
-        "Craneo Habla",            // 9
-        "Craneo Habla"             // 10
+        "Craneo Habla", "Expresión sorprendido", "Habla confundido", "Craneo Habla",
+        "Craneo Habla", "Craneo Habla", "Craneo Habla", "Craneo Habla",
+        "Craneo Habla", "Craneo Habla", "Craneo Habla"
     };
 
     private int indiceActual = 0;
 
     void Start()
     {
-        MostrarLinea(0);
+        StartCoroutine(IniciarDialogo());
 
         if (botonAvanzar != null)
         {
@@ -58,12 +51,25 @@ public class AnimacionDiagolo : MonoBehaviour
         }
     }
 
+    IEnumerator IniciarDialogo()
+    {
+        // Esperamos a que termine la animación inicial
+        yield return new WaitForSeconds(2f);
+
+        // Ahora sí aparece el primer diálogo
+        MostrarLinea(0);
+    }
+
     void MostrarLinea(int index)
     {
         if (index >= lineasDialogo.Length) return;
 
-        textoDialogo.text = lineasDialogo[index];
         textoNombre.text = "???";
+
+        if (textoDialogoEfecto != null)
+        {
+            textoDialogoEfecto.IniciarEfecto(lineasDialogo[index]);
+        }
 
         ReproducirAnimacion(index);
     }

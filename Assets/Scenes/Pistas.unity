@@ -2827,6 +2827,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::pantalla_pistas
   campo_codigo: {fileID: 788990196}
+  clickSound: {fileID: 8300000, guid: 3025fc0fc01316848962b4c4e29aeeb0, type: 3}
+  errorSound: {fileID: 8300000, guid: 2447855e018d87d4ca91e24480b4d57e, type: 3}
 --- !u!4 &2057852776
 Transform:
   m_ObjectHideFlags: 0
